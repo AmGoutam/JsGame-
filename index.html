@@ -11,17 +11,30 @@
 <body>
     <header>
         <div>
-            Time Left : <strong id="time">10</strong> Sec
+            Time Left : <strong id="time">0</strong> Sec
         </div>
         <div>
-            Target : <strong id="terget">6</strong>
+            Target : <strong id="terget">0</strong>
         </div>
         <div>
             Score : <strong id="score">0</strong>
         </div>
     </header>
     <main>
-        <div class="bubble_container"></div>
+        <div class="bubble_container">
+            <div class="append_container">
+                <button onclick="resetGame()">Start Game</button>
+                <div><strong>Note:</strong> 
+                    <ol>
+                        <li>The total time is 20 seconds.</li>
+                        <li>You have to select a number that is equal to the target.</li>
+                        <li>The target will change with every click.</li>
+                        <li>Correct answer: +10 points.</li>
+                        <li>Wrong answer: -5 points.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </main>
 
 

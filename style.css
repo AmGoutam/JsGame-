@@ -24,6 +24,12 @@ header div {
   text-align: center;
   align-content: center;
 }
+header div{
+    font-size: 23px;
+}
+header #time{
+    color: blue;
+}
 main .append_container,
 main .bubble_container {
   max-width: 60rem;
@@ -32,7 +38,7 @@ main .bubble_container {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   flex-wrap: wrap;
   overflow-y: auto;
 }

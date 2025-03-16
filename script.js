@@ -28,24 +28,20 @@ function startTimer() {
     handleTimer = setInterval(() => {
         leftTime--;
         TimerDispaly.textContent = leftTime;
-
+        if(leftTime < 5){
+            TimerDispaly.style.color = "red";
+        }else{
+            TimerDispaly.style.color = "blue";
+        }
         if (leftTime === 0) {
             clearInterval(handleTimer);
 
             let html = `        
             <div class="append_container">
-                <h1>Game Over..!!</h1>
+                <h1>Opps..!! Game Over</h1>
+                <h1>Try Again..</h1>
                 <h3>Score : <strong>${score}</strong></h3>
-                <button onclick="resetGame()">Start</button>
-                <div><strong>Note:</strong> 
-                    <ol>
-                        <li>The total time is ${originalTime} seconds.</li>
-                        <li>You have to select a number that is equal to the target.</li>
-                        <li>The target will change with every click.</li>
-                        <li>Correct answer: +10 points.</li>
-                        <li>Wrong answer: -5 points.</li>
-                    </ol>
-                </div>
+                <button onclick="resetGame()">Re Start</button>
             </div>`
             bubbleContainer.innerHTML = html;
             targetDisplay.textContent = 0;
@@ -92,6 +88,3 @@ document.addEventListener('keydown', function (event) {
         event.preventDefault(); // Prevent the default action (refresh)
     }
 });
-createBubbles()
-generateTarget()
-startTimer();
